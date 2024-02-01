@@ -15,7 +15,7 @@ import EventList from './EventsList';
   </section>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@ui/assets/sass/variables/colors';
 @import '@ui/assets/sass/variables/mixins';
 
@@ -25,7 +25,6 @@ import EventList from './EventsList';
 
 h2 {
   color: $darkGrey;
-  font-size: 35px;
   margin-bottom: 25px;
   span {
     color: $red;

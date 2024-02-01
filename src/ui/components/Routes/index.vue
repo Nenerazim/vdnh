@@ -29,12 +29,7 @@ import {mockRoutes} from './mock';
 @import '@ui/assets/sass/variables/colors';
 @import '@ui/assets/sass/variables/mixins';
 
-.content-block {
-  padding: 35px 56px;
-}
-
 h2 {
-  font-size: 35px;
   margin-bottom: 15px;
 }
 .section-description {
@@ -67,6 +62,7 @@ h2 {
       text-align: center;
       color: $red;
       font-family: 'Lebedev', sans-serif;
+      font-weight: 700;
     }
   }
 }

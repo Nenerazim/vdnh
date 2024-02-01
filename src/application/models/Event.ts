@@ -5,6 +5,7 @@ export interface IEvent {
   img: string;
   date: string;
   description?: string | undefined;
+  isAds?: boolean | undefined;
 }
 
 export abstract class EventModel implements IEvent {
@@ -14,6 +15,7 @@ export abstract class EventModel implements IEvent {
   public img: string;
   public date: string;
   public description?: string | undefined;
+  public isAds?: boolean | undefined;
 
   protected constructor({id, type, title, img, date, description}: IEvent) {
     this.id = id;

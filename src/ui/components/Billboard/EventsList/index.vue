@@ -7,7 +7,7 @@ const data = await EventsService.getList();
 <template>
   <div class="events-list">
     <div class="events-grid">
-      <div v-for="(event, i) in data" :key="event.id" class="event" :class="{big: i === 0}">
+      <div v-for="(event, i) in data" :key="event.id" class="event" :class="{big: i === 0, ads: event?.isAds}">
         <img :src="event.img" :alt="event.title" />
         <div class="event-content">
           <span>{{ event.type }}</span>
@@ -15,6 +15,7 @@ const data = await EventsService.getList();
           <div v-if="i === 0" class="description">{{ event?.description }}</div>
           <div class="date">{{ event.date }}</div>
         </div>
+        <div v-if="event?.isAds" class="ads-mark">Реклама</div>
       </div>
     </div>
   </div>
@@ -58,6 +59,39 @@ const data = await EventsService.getList();
       .date {
         font-size: 11px;
         color: #8c8c8c;
+      }
+    }
+    &.ads {
+      position: relative;
+      min-height: 300px;
+      justify-content: space-between;
+      padding: 18px 24px;
+      img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        padding: 8px;
+      }
+      .event-content {
+        z-index: 3;
+        span {
+          color: $white;
+        }
+        .title {
+          color: $white;
+        }
+        .date {
+          color: $white;
+        }
+      }
+      .ads-mark {
+        color: $white;
+        font-size: 11px;
+        font-weight: 500;
+        z-index: 3;
       }
     }
     &.big {

@@ -7,7 +7,7 @@ import 'swiper/css';
 
 <template>
   <section v-if="data" id="popular">
-    <h2>Популярное сейчас</h2>
+    <h1>Популярное сейчас</h1>
     <div class="popular-slider">
       <Swiper slides-per-view="auto" :space-between="20">
         <SwiperSlide v-for="slide in data" :key="slide.id">
@@ -29,8 +29,7 @@ import 'swiper/css';
 @import '@ui/assets/sass/variables/colors';
 @import '@ui/assets/sass/variables/mixins';
 
-h2 {
-  font-size: 45px;
+h1 {
   margin-bottom: 26px;
   color: $darkGrey;
 }

@@ -30,12 +30,12 @@ const calendar = [
           nextEl: '.slider-action-next'
         }"
       >
-        <SwiperSlide v-for="month in calendar" :key="month">
+        <SwiperSlide v-for="(month, i) in calendar" :key="month.month + i">
           <div class="month-slide">
             <div class="name">{{ month.month }}</div>
             <div class="dates">
               <div v-for="day in month.days" :key="day.date" class="day" :class="{active: active === day.date}" @click="active = day.date">
-                {{ day.dayOfWeek }}
+                <p>{{ day.dayOfWeek }}</p>
                 <span>{{ day.dayOfMonth }}</span>
               </div>
             </div>
@@ -113,6 +113,9 @@ const calendar = [
       font-size: 10px;
       font-weight: 500;
       cursor: pointer;
+      p {
+        text-transform: uppercase;
+      }
       span {
         @include font18(500);
         color: #000;

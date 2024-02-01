@@ -17,6 +17,18 @@ body {
   color: $black;
 }
 
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -26,6 +38,7 @@ img {
   background: $white;
   border-radius: 18px;
   &.b-r-16 {
+    padding: 35px 56px;
     border-radius: 16px;
   }
 }

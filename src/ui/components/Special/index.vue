@@ -41,7 +41,6 @@ import {data} from './mock';
   }
 }
 h2 {
-  font-size: 35px;
   color: $white;
   margin-bottom: 15px;
 }
