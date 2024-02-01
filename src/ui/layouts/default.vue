@@ -7,6 +7,7 @@ import Footer from '@ui/components/Footer';
   <div class="application">
     <div class="content">
       <div class="wrap">
+        <img src="/images/bubbles_top.png" alt="Bubbles" class="bubbles-bg">
         <Header />
         <div class="page">
           <slot />
@@ -22,5 +23,14 @@ import Footer from '@ui/components/Footer';
   max-width: 1366px;
   margin: 0 auto;
   padding-inline: 15px;
+}
+.bubbles-bg {
+  z-index: -1;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  object-fit: contain;
+  width: 100%;
+  height: 670px;
 }
 </style>
