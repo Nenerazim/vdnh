@@ -2,6 +2,7 @@
 import Calendar from './Calendar';
 import Categories from './Categories';
 import EventList from './EventsList';
+import AdditionalEvents from './AdditionalEvents';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import EventList from './EventsList';
       <Calendar />
       <Categories />
       <EventList />
+      <AdditionalEvents />
     </div>
   </section>
 </template>

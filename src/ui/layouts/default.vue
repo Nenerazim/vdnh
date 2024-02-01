@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Header from '@ui/components/Header';
+import Footer from '@ui/components/Footer';
 </script>
 
 <template>
@@ -11,7 +12,7 @@ import Header from '@ui/components/Header';
           <slot />
         </div>
       </div>
-      <!--      footer-->
+      <Footer />
     </div>
   </div>
 </template>

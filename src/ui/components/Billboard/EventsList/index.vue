@@ -18,6 +18,12 @@ const data = await EventsService.getList();
         <div v-if="event?.isAds" class="ads-mark">Реклама</div>
       </div>
     </div>
+    <div class="more">
+      Показать еще 8 событий
+      <svg width="24" height="22">
+        <use href="/sprites/icons.svg#mini-angle" />
+      </svg>
+    </div>
   </div>
 </template>
 
@@ -25,10 +31,22 @@ const data = await EventsService.getList();
 @import '@ui/assets/sass/variables/colors';
 @import '@ui/assets/sass/variables/mixins';
 
+.events-list {
+  margin-bottom: 25px;
+  .more {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    @include font18(500);
+    cursor: pointer;
+  }
+}
+
 .events-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  margin-bottom: 24px;
   .event {
     padding: 8px;
     display: flex;
